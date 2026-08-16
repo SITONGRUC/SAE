@@ -1,0 +1,13 @@
+
+======================================================================
+2026-08-15 18:04:52
+======================================================================
+train on val: 19,867 images x 196 patches = 3,893,932 vectors x 768
+m=9216  k=20  bias=True  epochs=20  device=mps
+pre-encoder bias initialised to the data mean (norm 27.62)
+  epoch  1/20  mse 2.8790  191s  F1 eye 0.722 hat 0.667  dead 0
+  epoch  2/20  mse 2.3878  194s  F1 eye 0.658 hat 0.594  dead 0
+  epoch  3/20  mse 2.1433  193s  F1 eye 0.575 hat 0.521  dead 0
+  epoch  4/20  mse 1.9994  195s  F1 eye 0.535 hat 0.458  dead 0
+  epoch  5/20  mse 1.8986  195s  F1 eye 0.513 hat 0.366  dead 0
+  epoch  6/20  mse 1.8203  197s  F1 eye 0.457 hat 0.315  dead 0

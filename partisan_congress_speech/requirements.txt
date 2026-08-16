@@ -1,0 +1,8 @@
+# Partisan hearing-speech pilot. Recorded runs: torch 2.13 on an M4/MPS, 2026-08.
+numpy
+pandas
+pyarrow
+scipy
+matplotlib
+torch
+openpyxl

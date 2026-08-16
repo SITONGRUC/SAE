@@ -1,0 +1,11 @@
+# Large data — regenerable from the 2.2 GB source CSV via data/merge_data.py
+# (the source CSV itself lives outside version control too).
+data/long_text_embedding_finished.csv
+data/emb.npy
+data/meta.parquet
+
+# Large derived arrays — regenerate with mvp.py. Tables and figures stay tracked.
+output/codes_all.npy
+
+__pycache__/
+.DS_Store

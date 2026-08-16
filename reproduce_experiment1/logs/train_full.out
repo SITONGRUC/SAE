@@ -1,0 +1,31 @@
+train on val: 19,867 images x 196 patches = 3,893,932 vectors x 768  ->  m=9216, k=20, device=mps
+  epoch  1/20  mse 3.4645  167s
+  epoch  2/20  mse 2.6446  167s
+  epoch  3/20  mse 2.2467  172s
+  epoch  4/20  mse 2.0247  172s
+  epoch  5/20  mse 1.8812  169s
+  epoch  6/20  mse 1.7793  164s
+  epoch  7/20  mse 1.7019  168s
+  epoch  8/20  mse 1.6404  164s
+  epoch  9/20  mse 1.5900  172s
+  epoch 10/20  mse 1.5477  170s
+  epoch 11/20  mse 1.5119  170s
+  epoch 12/20  mse 1.4806  173s
+  epoch 13/20  mse 1.4532  172s
+  epoch 14/20  mse 1.4288  169s
+  epoch 15/20  mse 1.4070  171s
+  epoch 16/20  mse 1.3874  173s
+  epoch 17/20  mse 1.3697  176s
+  epoch 18/20  mse 1.3535  174s
+  epoch 19/20  mse 1.3388  176s
+  epoch 20/20  mse 1.3255  177s
+
+test codes (19962, 9216) | dead codes: 0 / 9216 (0.0%)
+
+attribute       best code      F1    prec     rec   paper
+Eyeglasses           1914  0.5776  0.4855  0.7130   neuron 6051, F1=0.748
+Wearing_Hat          2202  0.4782  0.3635  0.6985   neuron 38, F1=0.841
+Smiling              1726  0.7545  0.6098  0.9891   (distractor)
+
+ground truth G = {1914, 2202}  (Eyeglasses, Wearing_Hat)
+below the 0.6 checkpoint (worst = 0.478) — see TODO.md before tuning

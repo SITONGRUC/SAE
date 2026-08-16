@@ -1,0 +1,40 @@
+
+======================================================================
+2026-08-15 18:44:23
+======================================================================
+train on val: 19,867 images x 196 patches = 3,893,932 vectors x 768
+m=9216  k=5  bias=True  epochs=20  device=mps
+pre-encoder bias initialised to the data mean (norm 27.62)
+  epoch  1/20  mse 3.4304  180s  F1bal eye 0.972 hat 0.953  (raw 0.839/0.781)  dead 600
+  epoch  2/20  mse 2.8679  183s  F1bal eye 0.968 hat 0.962  (raw 0.818/0.809)  dead 2779
+  epoch  3/20  mse 2.5911  185s  F1bal eye 0.966 hat 0.948  (raw 0.824/0.812)  dead 3993
+  epoch  4/20  mse 2.4369  185s  F1bal eye 0.965 hat 0.943  (raw 0.816/0.805)  dead 4504
+  epoch  5/20  mse 2.3321  185s  F1bal eye 0.962 hat 0.943  (raw 0.811/0.798)  dead 4661
+  epoch  6/20  mse 2.2526  185s  F1bal eye 0.960 hat 0.942  (raw 0.811/0.720)  dead 4621
+  epoch  7/20  mse 2.1900  185s  F1bal eye 0.961 hat 0.947  (raw 0.811/0.713)  dead 4495
+  epoch  8/20  mse 2.1391  184s  F1bal eye 0.958 hat 0.953  (raw 0.804/0.715)  dead 4350
+  epoch  9/20  mse 2.0969  186s  F1bal eye 0.953 hat 0.951  (raw 0.814/0.705)  dead 4279
+  epoch 10/20  mse 2.0621  186s  F1bal eye 0.952 hat 0.956  (raw 0.815/0.703)  dead 4244
+  epoch 11/20  mse 2.0334  185s  F1bal eye 0.948 hat 0.960  (raw 0.826/0.698)  dead 4270
+  epoch 12/20  mse 2.0092  185s  F1bal eye 0.945 hat 0.955  (raw 0.822/0.692)  dead 4332
+  epoch 13/20  mse 1.9886  184s  F1bal eye 0.943 hat 0.955  (raw 0.814/0.705)  dead 4403
+  epoch 14/20  mse 1.9707  185s  F1bal eye 0.942 hat 0.955  (raw 0.804/0.698)  dead 4449
+  epoch 15/20  mse 1.9551  186s  F1bal eye 0.942 hat 0.950  (raw 0.791/0.691)  dead 4504
+  epoch 16/20  mse 1.9415  184s  F1bal eye 0.943 hat 0.950  (raw 0.785/0.670)  dead 4526
+  epoch 17/20  mse 1.9295  186s  F1bal eye 0.941 hat 0.948  (raw 0.785/0.682)  dead 4529
+  epoch 18/20  mse 1.9185  185s  F1bal eye 0.939 hat 0.943  (raw 0.778/0.669)  dead 4626
+  epoch 19/20  mse 1.9087  184s  F1bal eye 0.935 hat 0.940  (raw 0.761/0.662)  dead 4648
+  epoch 20/20  mse 1.8998  185s  F1bal eye 0.935 hat 0.939  (raw 0.753/0.673)  dead 4702
+wrote training_curve_k5.png and checkpoints/train_history_k5.csv
+
+test codes (19962, 9216) | dead codes: 2,539 / 9216 (27.5%)
+
+attribute      argmax raw   F1raw argmax bal   F1bal   paper (experimental prevalence)
+Eyeglasses           2455  0.7406       8654  0.9378   neuron 6051, F1=0.748
+Wearing_Hat          7179  0.6707       6795  0.9360   neuron 38, F1=0.841
+Smiling              1075  0.7887   (distractor)
+
+NOTE: the raw-prevalence argmax is NOT the paper's G. The Evaluation paragraph
+scores F1 over {i=1..n}, the simulated experiment's sample (prevalence ~0.35-0.5).
+figure5.py must identify G on the simulated sample, not from this file's argmax.
+balanced-prevalence checkpoint: worst = 0.936 (clears 0.6)

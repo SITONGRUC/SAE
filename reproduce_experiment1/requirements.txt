@@ -1,0 +1,12 @@
+# Experiment 1 replication. Versions are what the recorded runs used (2026-08,
+# torch 2.13 on an M4/MPS); anything reasonably recent should work.
+numpy
+pandas
+pyarrow
+scipy
+scikit-learn
+matplotlib
+torch
+transformers
+pillow
+requests

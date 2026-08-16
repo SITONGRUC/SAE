@@ -1,0 +1,9 @@
+# Regenerable artifacts — rebuild with the pipeline in README.md.
+# Scripts and notes stay tracked; images, features and checkpoints do not.
+data/*
+!data/*.py
+!data/*.md
+features/
+checkpoints/
+__pycache__/
+.DS_Store

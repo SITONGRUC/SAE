@@ -1,0 +1,71 @@
+codes (19962, 9216) from codes_test_k5.npy | G identified per simulated sample | 4 x 9 x 10 = 360 cells
+  n=   30 ate=0.0 done
+  n=   30 ate=0.1 done
+  n=   30 ate=0.2 done
+  n=   30 ate=0.3 done
+  n=   30 ate=0.4 done
+  n=   30 ate=0.5 done
+  n=   30 ate=0.6 done
+  n=   30 ate=0.7 done
+  n=   30 ate=0.8 done
+  n=  250 ate=0.0 done
+  n=  250 ate=0.1 done
+  n=  250 ate=0.2 done
+  n=  250 ate=0.3 done
+  n=  250 ate=0.4 done
+  n=  250 ate=0.5 done
+  n=  250 ate=0.6 done
+  n=  250 ate=0.7 done
+  n=  250 ate=0.8 done
+  n=  500 ate=0.0 done
+  n=  500 ate=0.1 done
+  n=  500 ate=0.2 done
+  n=  500 ate=0.3 done
+  n=  500 ate=0.4 done
+  n=  500 ate=0.5 done
+  n=  500 ate=0.6 done
+  n=  500 ate=0.7 done
+  n=  500 ate=0.8 done
+  n= 5000 ate=0.0 done
+  n= 5000 ate=0.1 done
+  n= 5000 ate=0.2 done
+  n= 5000 ate=0.3 done
+  n= 5000 ate=0.4 done
+  n= 5000 ate=0.5 done
+  n= 5000 ate=0.6 done
+  n= 5000 ate=0.7 done
+  n= 5000 ate=0.8 done
+
+averaged over ATE and seeds:
+                 precision  recall    iou
+n    method                              
+30   Bonferroni      0.046   0.039  0.030
+     FDR             0.048   0.078  0.033
+     NES             0.031   0.028  0.023
+     t-test          0.020   0.417  0.020
+     top-k           0.250   0.250  0.181
+250  Bonferroni      0.072   0.506  0.061
+     FDR             0.031   0.589  0.029
+     NES             0.343   0.389  0.245
+     t-test          0.007   0.739  0.007
+     top-k           0.483   0.483  0.378
+500  Bonferroni      0.058   0.644  0.048
+     FDR             0.027   0.689  0.023
+     NES             0.289   0.406  0.216
+     t-test          0.005   0.811  0.005
+     top-k           0.478   0.478  0.359
+5000 Bonferroni      0.024   0.861  0.023
+     FDR             0.008   0.867  0.008
+     NES             0.184   0.550  0.149
+     t-test          0.002   0.889  0.002
+     top-k           0.450   0.450  0.311
+
+distinct G codes per n (G stability across ATE x seeds):
+      g1  g2
+n           
+30     7   7
+250    2   3
+500    2   3
+5000   1   2
+
+wrote figure5.parquet
